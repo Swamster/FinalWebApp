@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="design.css"/>
+<title>Swamster | Home</title>
+</head>
+<body class="bodybackground">
+
+<!-- Top navigation -->
+<div class="topnav" id="indextopnav">
+  <a href="index.html" class="active">Home</a>
+</div>
+
+
+<div class="defaultbody" id="indexbody1">
+  <div class="defaulttext" id="indextext1">
+  <p>Enter individual node </p>
+  <!--Calls the Swamster2 servlet to post individual nodes  -->
+	<form action="Swamster2" method="POST">
+	<button type="submit" name="enter">Submit</button>
+	<input type="text" name="text">
+</form>
+  </div>
+</div>
+
+
+<div class="defaultbody" id="indexbody2">
+  <div class="defaulttext" id="indextext1">
+ 
+<p> Upload .csv file </p>
+<!-- Calls the Swamster servlet to upload a csv and download a json  -->
+<form action="Swamster" method="POST" enctype= "multipart/form-data">
+
+<input type="file" name="input">
+<input type = "submit" name = "Upload" />
+
+<p> After upload, download the .json file and upload it directly to the Firebase database.
+</form>
+
+  </div>
+</div>
+
+</body>
+
+<!--Javascript connection/link to Firebase database -->
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAJIorYfyXdhQ9THqnJsXp4rjGIjxcS1ds",
+    authDomain: "swamsteras.firebaseapp.com",
+    databaseURL: "https://swamsteras.firebaseio.com",
+    projectId: "swamsteras",
+    storageBucket: "swamsteras.appspot.com",
+    messagingSenderId: "824450759757"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!--Javascript function that sends inputs to the server -->
+<script type="text/javascript">
+
+function send(message) {
+var database = firebase.database();
+firebase.database().ref('server').set(message);
+}
+</script>  
+
+</html>

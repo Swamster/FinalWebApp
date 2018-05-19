@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* Page background*/
+
+.bodybackground {
+	background-color: white;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+/* Navigation bar */
+ 
+.topnav {
+    background-color: #0099cc;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Changes color of topnav when mouse hovers over it */
+.topnav a:hover {
+    background-color: #007399;
+    color: white;
+}
+
+/* Changes color of active page in topnav */
+.active {
+    background-color: #007399;
+    color: #66d9ff;
+}
+
+
+/* default body/div */
+
+.defaultbody {
+	background-color:white;
+	padding: 1%;
+	height: 20%;
+}	
+
+/* default textbox*/
+
+.defaulttext{
+	background-color: #007399;
+	color: white;
+	padding: 5%;
+	overflow: hidden;
+}
+
+/* default title text */
+
+.titletext{
+	text-align: center;
+}
