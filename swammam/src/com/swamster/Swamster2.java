@@ -53,9 +53,6 @@ public class Swamster2 extends HttpServlet {
 				"\r\n" + 
 				"\r\n" + 
 				"\r\n" + 
-				"<div class=\"topnav\" id=\"indextopnav\">\r\n" + 
-				"  <a href=\"index.html\" class=\"active\">Home</a>\r\n" + 
-				"</div>\r\n" + 
 				"\r\n" + 
 				"<div class=\"defaultbody\" id=\"indexbody3\">"+"\n"+
 				"<p> Press send to send your text to the database.</p>"); // prints html as a response
@@ -65,7 +62,7 @@ public class Swamster2 extends HttpServlet {
 		response.getOutputStream().println("<button type=\"button\"  onclick=\"send("+"'"+ typein+"'"+" )\">Send\r\n" +" </button> "); // send button (calls javascript function on webpage)
 		
 		
-		RequestDispatcher go = request.getRequestDispatcher("/test.html");
+		RequestDispatcher go = request.getRequestDispatcher("/index.html");
 		go.include(request, response);
 	}
 
